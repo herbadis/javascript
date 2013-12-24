@@ -1005,13 +1005,23 @@
     ```javascript
     // bad
     function sendMessageToUser(user1, user2) {
-      var date = Date();
+      var date = Date(),
+          message = {
+            body: 'hey',
+            messageCreationDate: date
+          };
+          
       // ...stuff...
     }
     
     // good
     function sendMessageToUser(sender, recipient) {
-      var messageCreationDate = Date();
+      var messageCreationDate = Date(),
+          message = {
+            body: 'hey',
+            creationDate: messageCreationDate
+          };
+          
       // ..stuff..
     }
     ```
