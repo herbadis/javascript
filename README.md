@@ -999,6 +999,22 @@
       // ..stuff..
     }
     ```
+    
+  - Allow scope to imply context for names.  Be sure to use meaningful names to differentiate items of similar nature.
+
+    ```javascript
+    // bad
+    function sendMessageToUser(user1, user2) {
+      var date = Date();
+      // ...stuff...
+    }
+    
+    // good
+    function sendMessageToUser(sender, recipient) {
+      var messageCreationDate = Date();
+      // ..stuff..
+    }
+    ```
 
   - Use camelCase when naming objects, functions, and instances
 
